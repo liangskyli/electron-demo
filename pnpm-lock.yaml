@@ -8,6 +8,9 @@ dependencies:
   '@umijs/max':
     specifier: ^4.0.74
     version: 4.0.74(@babel/core@7.22.9)(@types/react-dom@18.2.7)(@types/react@18.2.18)(dva@2.5.0-beta.2)(postcss@8.4.27)(prettier@3.0.1)(rc-field-form@1.36.2)(react-dom@18.2.0)(react@18.2.0)(styled-components@6.0.7)(typescript@5.1.6)(webpack@5.88.2)
+  electron-log:
+    specifier: 5.0.0-beta.25
+    version: 5.0.0-beta.25
   react:
     specifier: ^18.2.0
     version: 18.2.0
@@ -5576,6 +5579,11 @@ packages:
     transitivePeerDependencies:
       - supports-color
     dev: true
+
+  /electron-log@5.0.0-beta.25:
+    resolution: {integrity: sha512-ihfT5W3cGx0x8+tTO+51lyxWbu2pXcbFlBcdYRw13Q4PtJh3n38385ZC7gnpfP9Ou6SFgYfyd2qsL2BYRpulXQ==}
+    engines: {electron: '>= 13', node: '>= 14'}
+    dev: false
 
   /electron-publish@24.5.0:
     resolution: {integrity: sha512-zwo70suH15L15B4ZWNDoEg27HIYoPsGJUF7xevLJLSI7JUPC8l2yLBdLGwqueJ5XkDL7ucYyRZzxJVR8ElV9BA==}

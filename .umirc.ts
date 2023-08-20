@@ -4,4 +4,10 @@ export default defineConfig({
   npmClient: 'pnpm',
   plugins: ['@liangskyli/umijs-plugin-electron'],
   electron: {},
+  dva: {
+    immer: {
+      enableES5: true,
+      enableAllPlugins: true,
+    },
+  },
 });

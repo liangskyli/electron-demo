@@ -1,6 +1,11 @@
+import { mainLogger } from '@/common/logger/main';
 import { app, BrowserWindow, protocol } from 'electron';
 import * as path from 'path';
 import createProtocol from './createProtocol';
+
+mainLogger(app);
+
+console.log('mainLogger:', { main: '1' });
 
 const isDevelopment = process.env.NODE_ENV === 'development';
 let mainWindow: BrowserWindow;
