@@ -8,7 +8,7 @@ const mainLogger = (app: App) => {
   logger.initialize({ preload: true });
   Object.assign(console, logger.functions);
 
-  logger.catchErrors({});
+  logger.errorHandler.startCatching({});
   logger.transports.console.level = false;
   logger.transports.file.maxSize = 1024 * 1024 * 2;
   logger.transports.file.archiveLogFn = archiveLogFn;

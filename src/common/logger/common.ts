@@ -2,8 +2,8 @@ import type { LogFile } from 'electron-log';
 import fs from 'fs';
 import path from 'path';
 
-function formatNumber(n) {
-  n = n.toString();
+function formatNumber(number: number) {
+  const n = number.toString();
   return n[1] ? n : `0${n}`;
 }
 
@@ -38,7 +38,7 @@ const archiveLogFn = (file: LogFile) => {
         `${info.name}.old.${fileNameFormatTime()}${info.ext}`,
       ),
     );
-  } catch (e) {
+  } catch (e: any) {
     const data = ['electron-log.transports.file: Could not rotate log'];
 
     if (e) {

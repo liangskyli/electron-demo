@@ -25,18 +25,18 @@
     ]
   },
   "dependencies": {
-    "@umijs/max": "^4.0.79",
-    "electron-log": "5.0.0-beta.25",
+    "@umijs/max": "^4.0.81",
+    "electron-log": "5.0.0-beta.29",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@liangskyli/umijs-plugin-electron": "^0.1.2",
+    "@liangskyli/umijs-plugin-electron": "^0.2.0",
     "@types/react": "^18.2.21",
     "@types/react-dom": "^18.2.7",
     "cross-env": "^7.0.3",
-    "electron": "^26.1.0",
-    "electron-builder": "^24.6.3",
+    "electron": "^26.2.1",
+    "electron-builder": "^24.6.4",
     "husky": "^8.0.3",
     "lint-staged": "^14.0.1",
     "prettier": "^3.0.3",
