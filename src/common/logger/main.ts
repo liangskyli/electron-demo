@@ -7,12 +7,13 @@ import path from 'path';
 const mainLogger = (app: App) => {
   logger.initialize({ preload: true });
   Object.assign(console, logger.functions);
+  const version = app.getVersion();
 
   logger.errorHandler.startCatching({});
   logger.transports.console.level = false;
   logger.transports.file.maxSize = 1024 * 1024 * 2;
   logger.transports.file.archiveLogFn = archiveLogFn;
-  logger.variables.version = '0.0.1'; // todo
+  logger.variables.version = version;
   logger.transports.file.resolvePathFn = (
     variables: PathVariables,
     message?: LogMessage,
