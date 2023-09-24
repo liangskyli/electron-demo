@@ -1,0 +1,44 @@
+name: Build/release
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - 'src/**'
+  workflow_dispatch:
+
+jobs:
+  mac:
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [macos-latest]
+
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Install Node.js, NPM and Yarn
+        uses: actions/setup-node@v1
+        with:
+          node-version: 16
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2.2.4
+
+      - name: Install dependencies
+        run: pnpm i
+
+      - name: build mac Electron app
+        run: pnpm electron:build:mac
+
+      - name: Upload File
+        uses: actions/upload-artifact@v3
+        with:
+          name: mac
+          path: |
+            dist_electron/*dmg
+            dist_electron/latest-mac.yml
