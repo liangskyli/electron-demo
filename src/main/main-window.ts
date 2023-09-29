@@ -1,4 +1,5 @@
-import createProtocol from '@/createProtocol';
+import checkUpdate from '@/check-update';
+import createProtocol from '@/create-protocol';
 import { app, BrowserWindow } from 'electron';
 import * as path from 'path';
 
@@ -30,10 +31,10 @@ function createMainWindow() {
     width: 800,
     height: 600,
     webPreferences: {
-      contextIsolation: true,
       preload: path.join(__dirname, 'preload.js'),
     },
   });
+  checkUpdate(mainWindow);
   context.mainWindow = mainWindow;
   context.mainWindow.on('close', (event) => {
     if (process.platform !== 'darwin') {

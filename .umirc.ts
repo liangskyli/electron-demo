@@ -3,8 +3,10 @@ import { defineConfig } from '@umijs/max';
 export default defineConfig({
   npmClient: 'pnpm',
   plugins: ['@liangskyli/umijs-plugin-electron'],
+  antd: {},
   electron: {
     builderOptions: {
+      // asar: false,
       appId: 'com.electron.demo.app',
       productName: 'electron-demo1',
       dmg: {
@@ -16,7 +18,7 @@ export default defineConfig({
       },
       publish: {
         provider: 'generic',
-        url: 'url',
+        url: 'http://localhost:8000/download/',
       },
     },
   },
