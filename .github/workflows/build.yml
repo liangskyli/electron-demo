@@ -21,13 +21,17 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Install Node.js, NPM and Yarn
-        uses: actions/setup-node@v1
-        with:
-          node-version: 16
-
       - name: Install pnpm
         uses: pnpm/action-setup@v2.2.4
+        with:
+          version: 8.x
+
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
+          registry-url: 'https://registry.npmjs.org/'
+          cache: 'pnpm'
 
       - name: Install dependencies
         run: pnpm i
@@ -39,6 +43,4 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: mac
-          path: |
-            dist_electron/*dmg
-            dist_electron/latest-mac.yml
+          path: dist_electron
