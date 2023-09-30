@@ -25,25 +25,25 @@
     ]
   },
   "dependencies": {
-    "@umijs/max": "^4.0.81",
-    "antd": "^5.9.3",
+    "@umijs/max": "^4.0.83",
+    "antd": "^5.9.4",
     "electron-log": "5.0.0-beta.29",
     "electron-updater": "^6.1.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@liangskyli/umijs-plugin-electron": "^0.2.0",
-    "@types/react": "^18.2.21",
-    "@types/react-dom": "^18.2.7",
+    "@liangskyli/umijs-plugin-electron": "^0.3.0",
+    "@types/react": "^18.2.23",
+    "@types/react-dom": "^18.2.8",
     "cross-env": "^7.0.3",
-    "electron": "^26.2.1",
+    "electron": "^26.2.4",
     "electron-builder": "^24.6.4",
     "husky": "^8.0.3",
     "lint-staged": "^14.0.1",
     "prettier": "^3.0.3",
     "prettier-plugin-organize-imports": "^3.2.3",
-    "prettier-plugin-packagejson": "^2.4.5",
+    "prettier-plugin-packagejson": "^2.4.6",
     "typescript": "^5.2.2"
   },
   "engines": {
