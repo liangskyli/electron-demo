@@ -21,6 +21,7 @@ const api: any = {
     await ipcRenderer.invoke(CONFIRM_UPDATE);
   },
   watchVersionUpdateMsg: (callback: (arg: IUpdateType) => void) => {
+    ipcRenderer.removeAllListeners(VERSION_UPDATE_MESSAGE);
     ipcRenderer.on(VERSION_UPDATE_MESSAGE, (event, arg: IUpdateType) => {
       callback(arg);
     });
