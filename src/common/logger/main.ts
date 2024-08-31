@@ -2,7 +2,7 @@ import { archiveLogFn } from '@/common/logger/common';
 import type { App } from 'electron';
 import type { LogMessage, PathVariables } from 'electron-log';
 import logger from 'electron-log/main';
-import path from 'path';
+import path from 'node:path';
 
 const mainLogger = (app: App) => {
   logger.initialize({ preload: true });

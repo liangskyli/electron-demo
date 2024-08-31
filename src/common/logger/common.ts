@@ -1,6 +1,6 @@
 import type { LogFile } from 'electron-log';
-import fs from 'fs';
-import path from 'path';
+import fs from 'node:fs';
+import path from 'node:path';
 
 function formatNumber(number: number) {
   const n = number.toString();

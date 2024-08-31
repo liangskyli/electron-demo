@@ -8,7 +8,7 @@ import type { IUpdateType } from '@/common/types';
 import type { BrowserWindow } from 'electron';
 import { app, ipcMain } from 'electron';
 import { autoUpdater } from 'electron-updater';
-import path from 'path';
+import path from 'node:path';
 
 const isDevelopment = process.env.NODE_ENV === 'development';
 
