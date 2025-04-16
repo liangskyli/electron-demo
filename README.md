@@ -4,6 +4,7 @@
 
 - 底层基于umi插件[@liangskyli/umijs-plugin-electron](https://github.com/liangskyli/umi-electron)实现
 
+## 注意：因umi@4版本处于维护状态，不再适应新技术的发展，目前没有umi@5的发布计划，建议迁移使用新技术[electron-vite-react](https://github.com/liangskyli/electron-vite-react)
 
 ### Electron 版本降级
 
